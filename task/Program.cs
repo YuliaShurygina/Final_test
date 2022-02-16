@@ -38,3 +38,21 @@ string[] CreateNewArray(string[] someArray, int length, int number)
     }
     return newArray;
 }
+string PrintArray(string[] array)
+{
+    if (array.Length == 0)
+    {
+        return "[]";
+    }
+    string result = "[";
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i == array.Length - 1)
+            result += $"\"{array[i]}\"";
+        else 
+            result += $"\"{array[i]}\", ";
+    }
+    result += "]";
+    return result;
+}
+
