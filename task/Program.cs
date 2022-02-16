@@ -24,3 +24,17 @@ int FindNewArrayLength(string[] someArray, int number)
      }
      return count;
 }
+string[] CreateNewArray(string[] someArray, int length, int number)
+{
+    string[] newArray = new string[length];
+    int j = 0;
+    for (int i = 0; i < someArray.Length; i++)
+    { 
+        if (someArray[i].Length <= number)
+        {
+            newArray[j] = someArray[i];
+            j++;
+        }
+    }
+    return newArray;
+}
