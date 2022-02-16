@@ -14,3 +14,13 @@ string[] FillArray(int length)
     }
     return array;
 }
+int FindNewArrayLength(string[] someArray, int number)
+{
+     int count = 0;
+     for (int i = 0; i < someArray.Length; i++)
+     {
+        if (someArray[i].Length <= number)
+           count++;
+     }
+     return count;
+}
