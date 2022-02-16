@@ -55,4 +55,10 @@ string PrintArray(string[] array)
     result += "]";
     return result;
 }
+Console.Write("Введите длину первоначального массива строк: ");
+int arrayLength = int.Parse(Console.ReadLine()??"0");
+string[] stringArray = FillArray(arrayLength);
+int newArrayLength = FindNewArrayLength(stringArray, 3);
+string[] newArray = CreateNewArray(stringArray, newArrayLength, 3);
+Console.Write($"{PrintArray(stringArray)} -> {PrintArray(newArray)}");
 
